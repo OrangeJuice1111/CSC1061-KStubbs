@@ -8,9 +8,9 @@ public class Farm {
 		
 		System.out.println(tango.makeSound());
 		
-		Horse Rosko = new Horse(3);
-		rosco.setName("Rosko");
-		System.out.println(Rosko.makeSound());
+		Horse rosko = new Horse(3);
+		//rosco.setName("Rosko");
+		System.out.println(rosko.makeSound());
 
 	}
 	
