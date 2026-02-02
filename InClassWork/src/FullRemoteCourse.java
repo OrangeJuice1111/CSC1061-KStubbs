@@ -1,4 +1,5 @@
 
-public class FullRemoteCourse {
+public class FullRemoteCourse extends OnlineCourse{
 
+	private String email;
 }

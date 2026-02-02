@@ -1,4 +1,4 @@
 
-public class OnlineCourse {
+public class OnlineCourse extends Course{
 
 }
