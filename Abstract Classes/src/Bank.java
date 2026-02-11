@@ -15,4 +15,10 @@ public class Bank extends FinancialInstitution{
 		
 	}
 
+	@Override
+	public int compareTo(FinancialInstitution o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
