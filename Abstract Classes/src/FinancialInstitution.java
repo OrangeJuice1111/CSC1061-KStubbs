@@ -59,9 +59,13 @@ implements Comparable<FinancialInstitution>, Cloneable{
 		return 0;
 	}
 	
+	
+	
+	
 	@Override
 	public FinancialInstitution clone() throws CloneNotSupportedException {
 		FinancialInstitution clone = (FinancialInstitution) super.clone();
+		clone.address = clone.address();
 		return clone;
 	}
 	

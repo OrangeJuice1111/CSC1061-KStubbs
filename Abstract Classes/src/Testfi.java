@@ -32,7 +32,12 @@ public class Testfi {
 		b1.setAddress(new address());
 		b1.getAddress().street = "555 Merry Way";
 		
-		FinancialInstitution b2 = b1.clone();
+		FinancialInstitution b2 = null;
+		
+		if(b1 instanceof Cloneable) {
+		b2 = b1.clone();
+		}
+		
 		b2.setFiID(4);
 		b2.setFiName("My 4th bank");
 		System.out.println(b1 + " " + b1.getAddress().street);
