@@ -2,7 +2,7 @@
 public class CommisionEmployee extends Employees{
 	private double grossSales;
 	protected double commisionRate;
-	public CommisionEmployee(String first, String last, String ssn, double grossSales, double commisionRate) {
+	public CommisionEmployee(double grossSales, double commisionRate) {
 		super();
 		this.grossSales = grossSales;
 		this.commisionRate = commisionRate;

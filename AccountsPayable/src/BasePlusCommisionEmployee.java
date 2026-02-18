@@ -25,8 +25,7 @@ public class BasePlusCommisionEmployee extends CommisionEmployee{
 
 	@Override
 	public String toString() {
-		return "BasePlusCommisionEmployee ["
-				+ "getPaymentAmount()=" + getPaymentAmount() + ", toString()=" + super.toString() + ", getFirst()="
+		return "BasePlusCommisionEmployee [getPaymentAmount()=" + getPaymentAmount() + ", toString()=" + super.toString() + ", getFirst()="
 				+ getFirst() + ", getLast()=" + getLast() + ", getSSN()=" + getSSN() + ", getClass()=" + getClass()
 				+ ", hashCode()=" + hashCode() + "]";
 	}
