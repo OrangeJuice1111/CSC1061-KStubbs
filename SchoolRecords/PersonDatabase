@@ -1,0 +1,120 @@
+Student
+Student@85ede7b
+-
+Student
+Student@63961c42
+-
+Student
+Student@65b54208
+-
+Student
+Student@1be6f5c3
+-
+Student
+Student@6b884d57
+-
+Student
+Student@38af3868
+-
+Student
+Student@85ede7b
+-
+Student
+Student@63961c42
+-
+Student
+Student@65b54208
+-
+Student
+Student@1be6f5c3
+-
+Student
+Student@6b884d57
+-
+Student
+Student@38af3868
+-
+Student
+Student@85ede7b
+-
+Student
+Student@63961c42
+-
+Student
+Student@65b54208
+-
+Student
+Student@1be6f5c3
+-
+Student
+Student@6b884d57
+-
+Student
+Student@38af3868
+-
+Student
+Person [address=123 College Ave, phoneNumber=555-1111, emailAddress=alice.s@school.edu]
+-
+Student
+Person [address=456 Dormitory Rd, phoneNumber=555-2222, emailAddress=bob.j@school.edu]
+-
+Faculty
+Faculty [officeHours=Mon/Wed 10-12, rank=senior]
+-
+Faculty
+Faculty [officeHours=Tue/Thu 1-3, rank=junior]
+-
+Staff
+Staff [title=Administrative Assistant]
+-
+Staff
+Staff [title=Head Custodian]
+-
+Student
+Person [address=123 College Ave, phoneNumber=555-1111, emailAddress=alice.s@school.edu]
+-
+Student
+Person [address=456 Dormitory Rd, phoneNumber=555-2222, emailAddress=bob.j@school.edu]
+-
+Faculty
+Faculty [officeHours=Mon/Wed 10-12, rank=senior]
+-
+Faculty
+Faculty [officeHours=Tue/Thu 1-3, rank=junior]
+-
+Staff
+Staff [title=Administrative Assistant]
+-
+Staff
+Staff [title=Head Custodian]
+-
+Student
+Person [address=123 College Ave, phoneNumber=555-1111, emailAddress=alice.s@school.edu]
+-
+Student
+Person [address=456 Dormitory Rd, phoneNumber=555-2222, emailAddress=bob.j@school.edu]
+-
+Faculty
+Faculty [officeHours=Mon/Wed 10-12, rank=senior]
+-
+Faculty
+Faculty [officeHours=Tue/Thu 1-3, rank=junior]
+-
+Staff
+Staff [title=Administrative Assistant]
+-
+Staff
+Staff [title=Head Custodian]
+-
+Student
+Person [address=123 College Ave, phoneNumber=555-1111, emailAddress=alice.s@school.edu]
+Student
+Person [address=456 Dormitory Rd, phoneNumber=555-2222, emailAddress=bob.j@school.edu]
+Faculty
+Faculty [officeHours=Mon/Wed 10-12, rank=senior]
+Faculty
+Faculty [officeHours=Tue/Thu 1-3, rank=junior]
+Staff
+Staff [title=Administrative Assistant]
+Staff
+Staff [title=Head Custodian]

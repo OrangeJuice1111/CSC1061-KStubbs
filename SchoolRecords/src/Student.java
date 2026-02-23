@@ -1,7 +1,20 @@
 
 public class Student extends Person{
 
-	private enum status{
-		Freshman, Sophmore, Junior, Senior;
-	}
+	 private String status; 
+	 
+	    public Student(String name, String address, String phoneNumber, String emailAddress, String status) {
+	        super(name, address, phoneNumber, emailAddress);
+	        this.setStatus(status);
+	    }
+
+		public String getStatus() {
+			return status;
+		}
+
+		public void setStatus(String status) {
+			this.status = status;
+		}
+	
+
 }
