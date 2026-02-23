@@ -29,7 +29,11 @@ public class Faculty extends Employee {
 
 	@Override
 	public String toString() {
-		return "Faculty [officeHours=" + officeHours + ", rank=" + rank + "]";
+		return "Faculty [officeHours=" + officeHours + ", rank=" + rank + ", getOffice()=" + getOffice()
+				+ ", getSalary()=" + getSalary() + ", getDateHired()=" + getDateHired() + ", toString()="
+				+ super.toString() + ", getAddress()=" + getAddress() + ", getPhoneNumber()=" + getPhoneNumber()
+				+ ", getEmailAddress()=" + getEmailAddress() + ", getClass()=" + getClass() + ", hashCode()="
+				+ hashCode() + "]";
 	}
 	
 	

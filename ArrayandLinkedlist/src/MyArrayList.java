@@ -14,6 +14,7 @@ public class MyArrayList<T> implements List{
 		size = 0;
 	}
 
+	
 	@Override
 	public int size() {
 		
@@ -32,7 +33,31 @@ public class MyArrayList<T> implements List{
 
 	@Override
 	public Iterator iterator() {
-		return null;
+		
+		return new MyIterator();
+	}
+	
+	private class MyIterator implements Iterator<T>{
+		private int index = 0;
+		
+		@Override
+		public T hasNext() {
+			if( index > size) {
+				
+				
+			}
+			
+			return true;
+		}
+		
+		
+		@Override
+		public T next() {
+			if (index >= size) {
+				throw new IndexOutOfBoundsException("Index exceeds");
+			}
+			return array[index++];
+		}
 	}
 
 	@Override
@@ -55,14 +80,21 @@ public class MyArrayList<T> implements List{
 			}
 			array = bigger;
 		}
-		array[size++] = e;
+		array[size++] = (T) e;
 		
 		return false;
 	}
 
 	@Override
 	public boolean remove(Object o) {
-		return false;
+		int index = indexOf(o);
+		if(index < 0) {
+			return false;
+		}
+		
+		
+		remove(index);
+		return true;
 	}
 
 	@Override
@@ -82,7 +114,11 @@ public class MyArrayList<T> implements List{
 
 	@Override
 	public boolean removeAll(Collection c) {
-		return false;
+		boolean flag = true;
+		for(Object obj : c) {
+			if(remove(obj));
+		}
+		return flag;
 	}
 
 	@Override

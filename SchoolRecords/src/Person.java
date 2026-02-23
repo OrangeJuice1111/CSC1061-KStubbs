@@ -41,7 +41,8 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return "Person [address=" + address + ", phoneNumber=" + phoneNumber + ", emailAddress=" + emailAddress + "]";
+		return "Person [name=" + name + ", address=" + address + ", phoneNumber=" + phoneNumber + ", emailAddress="
+				+ emailAddress + ", getClass()=" + getClass() + "]";
 	}
 	
 	

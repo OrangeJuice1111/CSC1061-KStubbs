@@ -40,7 +40,10 @@ public class Employee extends Person{
 
 	@Override
 	public String toString() {
-		return "Employee [office=" + office + ", salary=" + salary + ", dateHired=" + dateHired + "]";
+		return "Employee [office=" + office + ", salary=" + salary + ", dateHired=" + dateHired + ", getAddress()="
+				+ getAddress() + ", getPhoneNumber()=" + getPhoneNumber() + ", getEmailAddress()=" + getEmailAddress()
+				+ ", toString()=" + super.toString() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ "]";
 	}
 	
 	

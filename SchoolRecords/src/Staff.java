@@ -22,9 +22,12 @@ public class Staff extends Employee{
 
 
 	 @Override
-	 public String toString() {
-		return "Staff [title=" + title + "]";
-	 }
+	public String toString() {
+		return "Staff [title=" + title + ", getOffice()=" + getOffice() + ", getSalary()=" + getSalary()
+				+ ", getDateHired()=" + getDateHired() + ", toString()=" + super.toString() + ", getAddress()="
+				+ getAddress() + ", getPhoneNumber()=" + getPhoneNumber() + ", getEmailAddress()=" + getEmailAddress()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + "]";
+	}
 	 
 	 
 }
