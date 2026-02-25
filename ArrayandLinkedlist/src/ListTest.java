@@ -14,7 +14,7 @@ public class ListTest {
 		myArrList.add(5);
 		
 		
-		if(myArrList instanceof  )
+		//if(myArrList instanceof  )
 		System.out.println();
 		
 		for(int i = 0; i <myArrList.size(); i++) {
@@ -34,6 +34,34 @@ public class ListTest {
 			System.out.print(ans + " ");
 		}
 		System.out.println();
+		
+		
+		//test linked list
+		
+		List<Integer> ll = new MyDoubleLinkedList<>();
+		ll.add(6);
+		ll.add(7);
+		ll.add(8);
+		ll.add(9);
+		ll.add(10);
+		
+		// Traverse LinkedList
+		
+		for(int i = 0; i < ll.size();i++) {
+			System.out.print(ll.get(i));
+			
+			iter = ll.iterator();
+			while (iter.hasNext());{
+				System.out.println(iter.next() + " ");
+			}
+			System.out.println();
+			
+			for(Integer x : ll) {
+				System.out.print(x + " ");
+				
+			}
+			System.out.println();
+		}
 	}
 
 	
