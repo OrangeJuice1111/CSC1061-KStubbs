@@ -1,6 +1,7 @@
 package edu.frcc.csc1061j.Testing;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.*;
@@ -34,8 +35,15 @@ public class CalculatorTest {
 	@DisplayName ("Simple division")
 	@Disabled("Not ready for prime time")
 	void testDivide() {
-		assertEquals(3.0, calc.divide(6,2), "Divide no Worky");
+		assertEquals(3.0, calc.division(6,2), "Divide no Worky");
+	
 	}
 	
+	@Test
+	void testDivideException() {
+		ArithmeticException exception =
+				assertThrows(ArithmeticException.class, () -> calc.division(1, 0));
+		assertEquals("Divide by 0", exception.getMessage());
+	}
 	
 }
