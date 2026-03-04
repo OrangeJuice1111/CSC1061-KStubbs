@@ -55,17 +55,37 @@ public class MyHashMap <K,V> implements Map<K,V>{
 		}
 		@Override
 		public boolean containsKey(Object key) {
-			// TODO Auto-generated method stub
+			if (get(key) != null) {
+				return true;
+			}
 			return false;
 		}
 		@Override
 		public boolean containsValue(Object value) {
-			// TODO Auto-generated method stub
+			for(int i = 0; i < buckets.length; i++) {
+				if(buckets[i] != null) {
+					for(Entry<K,V> entry: buckets[i]) {
+						if(entry.getValue().equals(value)) {
+							return true;
+						}
+					}
+				}
+			}
 			return false;
 		}
 		@Override
 		public V get(Object key) {
+			int hashVal = Math.abs(key.hashCode());
+			int bucketIndex = hashVal % buckets.length;
+			LinkedList<Entry<K,V>> bucket = buckets[bucketIndex];
 			
+			if(bucket != null) {
+				for(Entry<K,V> entry: bucket) {
+					if(entry.getKey().equals(key)) {
+						return entry.getValue();
+					}
+				}
+			}
 			return null;
 		}
 		@Override
@@ -124,7 +144,10 @@ public class MyHashMap <K,V> implements Map<K,V>{
 		}
 		@Override
 		public void putAll(Map<? extends K, ? extends V> m) {
-			// TODO Auto-generated method stub
+			Set<? extends Map.Entry<? extends K,? extends V>> entries =  m.entrySet();
+			for(Map.Entry<? extends K,? extends V> entry: entries) {
+				put(entry.getKey(), entry.getValue());
+			}
 			
 		}
 		@Override
@@ -139,7 +162,7 @@ public class MyHashMap <K,V> implements Map<K,V>{
 		public Set<K> keySet() {
 			Set<K> set = new HashSet<>();
 			for(LinkedList<Entry<K, V>> bucket: buckets) {
-				if(buckets != null) {
+				if(bucket != null) {
 					for(Entry<K, V> entry: bucket) {
 						set.add(entry.getKey());
 					}

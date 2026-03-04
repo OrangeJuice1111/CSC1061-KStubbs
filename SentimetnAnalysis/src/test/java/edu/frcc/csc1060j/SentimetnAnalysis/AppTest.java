@@ -1,4 +1,4 @@
-package csc1060j.MyHashMap;
+package edu.frcc.csc1060j.SentimetnAnalysis;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
