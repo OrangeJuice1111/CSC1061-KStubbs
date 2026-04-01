@@ -32,7 +32,6 @@ public class SentimentAnalyzer {
             } catch (NumberFormatException ignored) {
             }
         }
-        br.close();
 
         return map;
     }
