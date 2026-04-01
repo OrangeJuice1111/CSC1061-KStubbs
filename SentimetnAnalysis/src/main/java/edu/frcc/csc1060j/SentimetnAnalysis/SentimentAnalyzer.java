@@ -38,17 +38,12 @@ public class SentimentAnalyzer {
 
     public static void main(String[] args) {
         File sentimentsFile = new File("sentiments.txt");
-        if (!sentimentsFile.exists()) {
-            System.out.println("ERROR: sentiments.txt not found in project root.");
-            System.out.println("Please place sentiments.txt in the same folder as pom.xml.");
-            return;
-        }
 
         MyHashMap<String, Integer> sentimentMap;
         try {
             sentimentMap = loadSentiments(sentimentsFile);
         } catch (IOException e) {
-            System.out.println("ERROR: Failed to read sentiments.txt: " + e.getMessage());
+            System.out.println("ERROR" + e.getMessage());
             return;
         }
 
