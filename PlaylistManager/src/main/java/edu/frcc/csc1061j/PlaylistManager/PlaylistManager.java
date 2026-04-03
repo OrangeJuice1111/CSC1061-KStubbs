@@ -22,8 +22,6 @@ public class PlaylistManager {
         boolean removed = playlist.remove(song);
         if (removed) {
             System.out.println("Removed: " + song);
-        } else {
-            System.out.println("Song not found: " + song);
         }
         return removed;
     }
@@ -33,10 +31,6 @@ public class PlaylistManager {
     }
 
     public void play() {
-        if (playlist.isEmpty()) {
-            System.out.println("Playlist is empty.");
-            return;
-        }
         System.out.println("Playing playlist:");
         for (Song song : playlist) {
             System.out.println(song);
@@ -46,7 +40,7 @@ public class PlaylistManager {
     public void shuffle() {
         int n = playlist.size();
         if (n <= 1) {
-            System.out.println("Playlist too small to shuffle.");
+            System.out.println("Playlist only has 1 song.");
             return;
         }
         for (int i = n - 1; i > 0; i--) {
