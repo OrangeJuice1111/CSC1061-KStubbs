@@ -1,9 +1,11 @@
 package edu.frcc.csc1060j.MyTreeSet;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Queue;
 import java.util.Set;
 
 public class MyTreeSet<E extends Comparable<E>> implements Set<E> {
@@ -46,8 +48,37 @@ public class MyTreeSet<E extends Comparable<E>> implements Set<E> {
 
 	@Override
 	public Iterator<E> iterator() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return new InOrderRecursive();
+	}
+	
+	private class InOrderRecursive implements Iterator<E>{
+		private Queue<E> queue = new ArrayDeque<E>();
+		
+		public InOrderRecursive() {
+			inorder(root);
+		}
+		
+		private void inorder(Node node) {
+			if(node == null) {
+				return;
+			}
+			
+			inorder(node.lChild);
+			queue.add(node.data);
+			inorder(node.rChild);
+		}
+
+		@Override
+		public boolean hasNext() {
+			return !queue.isEmpty();
+		}
+
+		@Override
+		public E next() {
+			return queue.remove();
+		}
+		
 	}
 
 	@Override
@@ -150,18 +181,31 @@ public class MyTreeSet<E extends Comparable<E>> implements Set<E> {
 					else {
 						//Left Right Imbalance
 						balanceLR(current, parent);
-						}
 					}
 					break;
 				case 2:
 					if(balanceFactor(current.rChild) >= 0) {
+						balanceRR(current, parent);
 						//Right Right Imbalance
 					}
 					else {
+						balanceRL(current, parent);
 						//Right Left Imbalance
 					}
 					break;
+			}
+		
 		}
+	}
+
+	private void balanceRL(Node node, Node parent) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void balanceRR(Node node, Node parent) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	private void balanceLL(Node node, Node parent) {

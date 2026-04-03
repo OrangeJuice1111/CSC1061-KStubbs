@@ -66,7 +66,7 @@ public class PlaylistManager {
             }
             System.out.println("Playlist saved to " + filename);
         } catch (IOException e) {
-            System.out.println("Error saving playlist: " + e.getMessage());
+            System.out.println("Error saving" + e.getMessage());
         }
     }
 
@@ -75,7 +75,7 @@ public class PlaylistManager {
             playlist.clear();
             String line;
             while ((line = reader.readLine()) != null) {
-                String[] parts = line.split("\\|", 2);
+                String[] parts = line.split("---", 2);
                 if (parts.length == 2) {
                     Song song = new Song(parts[0], parts[1]);
                     playlist.add(song);
@@ -146,7 +146,7 @@ public class PlaylistManager {
                     break;
                 case "9":
                     quit = true;
-                    System.out.println("bye bye");
+                    System.out.println("goodbye");
                     break;
                 default:
                     System.out.println("Invalid number only 1-9 work");
