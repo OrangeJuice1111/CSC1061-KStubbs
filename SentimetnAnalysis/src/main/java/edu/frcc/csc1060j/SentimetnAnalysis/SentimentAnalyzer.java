@@ -47,7 +47,7 @@ public class SentimentAnalyzer {
             return;
         }
 
-        System.out.println("Enter text (type END on a new line to finish):");
+        System.out.println("Enter text");
         Scanner scanner = new Scanner(System.in);
 
         int wordCount = 0;
@@ -64,7 +64,7 @@ public class SentimentAnalyzer {
                 if (word.isBlank()) continue;
 
                 wordCount++;
-                wordCount++;
+        	        wordCount++;
 
                 Integer score = sentimentMap.get(word);
                 if (score != null) {
@@ -82,8 +82,6 @@ public class SentimentAnalyzer {
                 previousWord = word;
             }
         }
-
-        scanner.close();
 
         double average = (wordCount == 0) ? 0.0 : (totalSentiment / (double) wordCount);
         DecimalFormat df = new DecimalFormat("0.00");

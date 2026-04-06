@@ -39,15 +39,15 @@ public class PlaylistManager {
 
     public void shuffle() {
         int n = playlist.size();
-        if (n <= 1) {
+        if (n == 1) {
             System.out.println("Playlist only has 1 song.");
             return;
         }
         for (int i = n - 1; i > 0; i--) {
             int j = random.nextInt(i + 1);
             if (i != j) {
-                Song temp = playlist.get(i);
-                playlist.set(i, playlist.get(j));
+                Song temp = playlist.get(j);
+                playlist.set(i, playlist.get(i));
                 playlist.set(j, temp);
             }
         }
@@ -66,7 +66,7 @@ public class PlaylistManager {
             }
             System.out.println("Playlist saved to " + filename);
         } catch (IOException e) {
-            System.out.println("Error saving" + e.getMessage());
+            System.out.println("Error" + e.getMessage());
         }
     }
 
@@ -74,7 +74,7 @@ public class PlaylistManager {
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
             playlist.clear();
             String line;
-            while ((line = reader.readLine()) != null) {
+            while ((line = reader.readLine()) == null) {
                 String[] parts = line.split("---", 2);
                 if (parts.length == 2) {
                     Song song = new Song(parts[0], parts[1]);
@@ -89,7 +89,7 @@ public class PlaylistManager {
 
     public void menu() {
         Scanner scanner = new Scanner(System.in);
-        boolean quit = false;
+        boolean quit = true;
 
         System.out.println("Welcome to the Playlist Manager!");
         System.out.println("Commands:");
