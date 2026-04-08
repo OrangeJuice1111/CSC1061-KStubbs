@@ -7,7 +7,7 @@ public class FileSizeFinder {
 
 	public static void main(String[] args) {
 
-		String filePath = "D:\\FileSizeTest";
+		String filePath = "C:\\Users\\kstu1\\OneDrive\\Documents\\FileSizeTest (1)";
 		
 		File file = new File(filePath);
 		

@@ -90,6 +90,7 @@ public class PlaylistManager {
     public void menu() {
         Scanner scanner = new Scanner(System.in);
         boolean quit = true;
+        String ans = "0";
 
         System.out.println("Welcome to the Playlist Manager!");
         System.out.println("Commands:");
@@ -103,11 +104,11 @@ public class PlaylistManager {
         System.out.println("8 - Load playlist from file");
         System.out.println("9 - Quit");
 
-        while (!quit) {
+        while (!ans.equals("9")) {
             System.out.print("Enter command number: ");
-            String input = scanner.nextLine().trim();
+            ans = scanner.nextLine().trim();
 
-            switch (input) {
+            switch (ans) {
                 case "1":
                     System.out.print("Enter song title: ");
                     String title = scanner.nextLine().trim();
@@ -153,7 +154,6 @@ public class PlaylistManager {
             }
         }
 
-        scanner.close();
     }
 
     public static void main(String[] args) {
