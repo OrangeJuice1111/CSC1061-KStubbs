@@ -243,7 +243,7 @@ public class MyTreeMap<K extends Comparable<K>, V> implements Map<K, V>, Iterabl
 		private List<V> list = new LinkedList<>();
 
 		public RecursiveIterator() {
-			inorder(root);
+			preorder(root);
 		}
 
 		private void inorder(Node node) {
